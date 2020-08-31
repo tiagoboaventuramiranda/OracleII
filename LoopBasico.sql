@@ -1,0 +1,12 @@
+DECLARE
+    V_SEGMERCADO_ID   CLIENTE.SEGMERCADO_ID%TYPE := 1;
+    V_I               NUMBER(3) := 1;
+BEGIN
+    LOOP
+        ATUALIZAR_SEGMERCADO(V_I, V_SEGMERCADO_ID);
+        V_I := V_I + 1;
+        EXIT WHEN V_I > 6;
+    END LOOP;
+END;
+
+SELECT * FROM CLIENTE;
